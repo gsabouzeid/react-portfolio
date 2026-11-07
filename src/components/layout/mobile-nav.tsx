@@ -1,5 +1,4 @@
-"use client";
-
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import {
   HouseDoor,
@@ -7,7 +6,6 @@ import {
   Link as LinkIcon,
   Person,
 } from "react-bootstrap-icons";
-import { useTranslation } from "react-i18next";
 import { ROUTES } from "../../constants";
 import { playNavSound } from "../../utils";
 
@@ -17,7 +15,7 @@ interface MobileNavProps {
 }
 
 const MobileNav = ({ toggleNav, onDismissToggle }: MobileNavProps) => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   function handleNavClick() {
     playNavSound();

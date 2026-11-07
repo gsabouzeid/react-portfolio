@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { NextIntlClientProvider } from "next-intl";
 import AOSInit from "../components/aos-init";
 import SiteShell from "../components/layout/site-shell";
 import "../index.css";
@@ -32,7 +33,9 @@ export default function RootLayout({
       <body>
         <div id="root">
           <AOSInit />
-          <SiteShell>{children}</SiteShell>
+          <NextIntlClientProvider>
+            <SiteShell>{children}</SiteShell>
+          </NextIntlClientProvider>
         </div>
       </body>
     </html>

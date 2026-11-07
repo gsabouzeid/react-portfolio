@@ -1,7 +1,5 @@
-"use client";
-
+import { useTranslations } from "next-intl";
 import { EnvelopeFill, Github, Linkedin } from "react-bootstrap-icons";
-import { useTranslation } from "react-i18next";
 import { playNavSound } from "../../utils";
 
 const LINKEDIN_LINK = "https://www.linkedin.com/in/garrett-abouzeid/";
@@ -9,7 +7,7 @@ const GITHUB_LINK = "https://github.com/gsabouzeid";
 const EMAIL = "gsabouzeid@gmail.com";
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   return (
     <footer className="flex flex-col items-center justify-between gap-3 bg-black/75 p-5 md:flex-row md:gap-6.25">

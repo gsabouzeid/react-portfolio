@@ -1,5 +1,4 @@
-"use client";
-
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import {
   HouseDoor,
@@ -8,7 +7,6 @@ import {
   List,
   Person,
 } from "react-bootstrap-icons";
-import { useTranslation } from "react-i18next";
 import { ROUTES } from "../../constants";
 import { playNavSound } from "../../utils";
 
@@ -17,7 +15,7 @@ interface NavProps {
 }
 
 const Nav = ({ onToggleNav }: NavProps) => {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   return (
     <nav className="sticky top-0 z-1 flex h-25 items-center justify-between bg-black/75 px-5 text-3xl">

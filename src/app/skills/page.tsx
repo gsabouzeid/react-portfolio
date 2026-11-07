@@ -1,11 +1,9 @@
-"use client";
-
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 import SkillPill from "../../components/skills/skill-pill";
 import { SKILLS } from "../../constants";
 
 export default function Page() {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   SKILLS.languages.sort((a, b) => a.name.localeCompare(b.name));
   SKILLS.frameworks.sort((a, b) => a.name.localeCompare(b.name));

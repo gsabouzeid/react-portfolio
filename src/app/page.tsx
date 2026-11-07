@@ -1,9 +1,7 @@
-"use client";
-
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 
 export default function Page() {
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   return (
     <div className="flex flex-1 flex-col justify-center text-center">
