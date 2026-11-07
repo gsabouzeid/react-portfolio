@@ -1,3 +1,6 @@
+"use client";
+
+import Link from "next/link";
 import {
   HouseDoor,
   Lightbulb,
@@ -6,9 +9,8 @@ import {
   Person,
 } from "react-bootstrap-icons";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import { ROUTES } from "../../constants";
-import { playNavSound } from "../utils/utils";
+import { playNavSound } from "../../utils";
 
 interface NavProps {
   onToggleNav: () => void;
@@ -19,7 +21,7 @@ const Nav = ({ onToggleNav }: NavProps) => {
 
   return (
     <nav className="sticky top-0 z-1 flex h-25 items-center justify-between bg-black/75 px-5 text-3xl">
-      <Link to={ROUTES.HOME} onClick={playNavSound}>
+      <Link href={ROUTES.HOME} onClick={playNavSound}>
         <img
           src={"/nav-logo.png"}
           alt={t("nav.logoAltText")}
@@ -30,7 +32,7 @@ const Nav = ({ onToggleNav }: NavProps) => {
       <div className="hidden items-center gap-12.5 md:flex">
         <Link
           className="after:block after:h-1.25 after:w-0 after:rounded-md after:bg-sky-400 after:transition-all after:duration-300 after:ease-out after:content-[''] hover:after:w-full active:after:bg-white"
-          to={ROUTES.HOME}
+          href={ROUTES.HOME}
           onClick={playNavSound}
         >
           <div className="flex items-center gap-2.5">
@@ -40,7 +42,7 @@ const Nav = ({ onToggleNav }: NavProps) => {
         </Link>
         <Link
           className="after:block after:h-1.25 after:w-0 after:rounded-md after:bg-sky-400 after:transition-all after:duration-300 after:ease-out after:content-[''] hover:after:w-full active:after:bg-white"
-          to={ROUTES.ABOUT}
+          href={ROUTES.ABOUT}
           onClick={playNavSound}
         >
           <div className="flex items-center gap-2.5">
@@ -50,7 +52,7 @@ const Nav = ({ onToggleNav }: NavProps) => {
         </Link>
         <Link
           className="after:block after:h-1.25 after:w-0 after:rounded-md after:bg-sky-400 after:transition-all after:duration-300 after:ease-out after:content-[''] hover:after:w-full active:after:bg-white"
-          to={ROUTES.SKILLS}
+          href={ROUTES.SKILLS}
           onClick={playNavSound}
         >
           <div className="flex items-center gap-2.5">

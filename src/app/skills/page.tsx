@@ -1,8 +1,10 @@
-import { useTranslation } from "react-i18next";
-import { SKILLS } from "../../constants";
-import SkillPill from "./SkillPill";
+"use client";
 
-const Skills = () => {
+import { useTranslation } from "react-i18next";
+import SkillPill from "../../components/skills/skill-pill";
+import { SKILLS } from "../../constants";
+
+export default function Page() {
   const { t } = useTranslation();
 
   SKILLS.languages.sort((a, b) => a.name.localeCompare(b.name));
@@ -58,6 +60,4 @@ const Skills = () => {
       </div>
     </div>
   );
-};
-
-export default Skills;
+}

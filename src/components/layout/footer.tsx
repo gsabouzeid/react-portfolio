@@ -1,6 +1,8 @@
+"use client";
+
 import { EnvelopeFill, Github, Linkedin } from "react-bootstrap-icons";
 import { useTranslation } from "react-i18next";
-import { playNavSound } from "../utils/utils";
+import { playNavSound } from "../../utils";
 
 const LINKEDIN_LINK = "https://www.linkedin.com/in/garrett-abouzeid/";
 const GITHUB_LINK = "https://github.com/gsabouzeid";

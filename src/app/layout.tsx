@@ -1,9 +1,14 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import AOSInit from "../components/aos-init";
+import SiteShell from "../components/layout/site-shell";
+import "../index.css";
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const metadata: Metadata = {
   title: "Garrett's Portfolio",
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const viewport: Viewport = {
   themeColor: [
     {
@@ -25,7 +30,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div id="root">{children}</div>
+        <div id="root">
+          <AOSInit />
+          <SiteShell>{children}</SiteShell>
+        </div>
       </body>
     </html>
   );

@@ -1,3 +1,6 @@
+"use client";
+
+import Link from "next/link";
 import {
   HouseDoor,
   Lightbulb,
@@ -5,9 +8,8 @@ import {
   Person,
 } from "react-bootstrap-icons";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import { ROUTES } from "../../constants";
-import { playNavSound } from "../utils/utils";
+import { playNavSound } from "../../utils";
 
 interface MobileNavProps {
   toggleNav: boolean;
@@ -28,7 +30,7 @@ const MobileNav = ({ toggleNav, onDismissToggle }: MobileNavProps) => {
     >
       <div className="flex flex-col">
         <Link
-          to={ROUTES.HOME}
+          href={ROUTES.HOME}
           onClick={handleNavClick}
           className="hover:bg-cyan-800 active:bg-cyan-700"
         >
@@ -38,7 +40,7 @@ const MobileNav = ({ toggleNav, onDismissToggle }: MobileNavProps) => {
           </div>
         </Link>
         <Link
-          to={ROUTES.ABOUT}
+          href={ROUTES.ABOUT}
           onClick={handleNavClick}
           className="hover:bg-cyan-800 active:bg-cyan-700"
         >
@@ -48,7 +50,7 @@ const MobileNav = ({ toggleNav, onDismissToggle }: MobileNavProps) => {
           </div>
         </Link>
         <Link
-          to={ROUTES.SKILLS}
+          href={ROUTES.SKILLS}
           onClick={handleNavClick}
           className="hover:bg-cyan-800 active:bg-cyan-700"
         >

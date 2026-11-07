@@ -1,6 +1,8 @@
+"use client";
+
 import { useTranslation } from "react-i18next";
 
-const Home = () => {
+export default function Page() {
   const { t } = useTranslation();
 
   return (
@@ -9,6 +11,4 @@ const Home = () => {
       <p className="text-2xl text-sky-400 md:text-3xl">{t("home.subTitle")}</p>
     </div>
   );
-};
-
-export default Home;
+}
