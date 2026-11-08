@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import Link from "next/link";
 import {
   HouseDoor,
@@ -20,11 +21,11 @@ const Nav = ({ onToggleNav }: NavProps) => {
   return (
     <nav className="sticky top-0 z-1 flex h-25 items-center justify-between bg-black/75 px-5 text-3xl">
       <Link href={ROUTES.HOME} onClick={playNavSound}>
-        <img
+        <Image
           src={"/nav-logo.png"}
           alt={t("nav.logoAltText")}
-          width="50px"
-          height="50px"
+          width={50}
+          height={50}
         />
       </Link>
       <div className="hidden items-center gap-12.5 md:flex">

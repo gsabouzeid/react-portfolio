@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export default function Page() {
   const t = useTranslations("about");
@@ -6,8 +7,10 @@ export default function Page() {
   return (
     <div className="grid grid-cols-[auto] place-items-center justify-items-center md:grid-cols-2">
       <div className="w-[75%] md:w-auto" data-aos="fade-right">
-        <img
-          src={"./about.jpeg"}
+        <Image
+          src={"/about.jpeg"}
+          width={500}
+          height={500}
           alt={t("picture1Alt")}
           className="h-auto w-125 rounded-[25px] shadow-[10px_10px_5px_black] transition-transform duration-300 ease-in-out hover:scale-105"
         />
@@ -92,8 +95,10 @@ export default function Page() {
         </ul>
       </div>
       <div className="w-[75%] md:w-auto" data-aos="fade-left">
-        <img
-          src={"./bouldering.jpg"}
+        <Image
+          src={"/bouldering.jpg"}
+          width={500}
+          height={333}
           alt={t("picture2Alt")}
           className="h-auto rounded-[25px] shadow-[10px_10px_5px_black] transition-transform duration-300 ease-in-out hover:scale-105"
         />
