@@ -6,3 +6,5 @@ Utilized tools and frameworks, such as:
 - Vite
 - Tailwind CSS
 - Internationalization (i18n)
+
+Published via Github Pages
