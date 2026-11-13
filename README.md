@@ -7,4 +7,4 @@ Utilized tools and frameworks, such as:
 - Tailwind CSS
 - Internationalization (i18n)
 
-Published via Github Pages
+Published via Github Pages, can access website [here](https://gsabouzeid.github.io/react-portfolio/)
